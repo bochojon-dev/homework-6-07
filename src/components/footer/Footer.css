@@ -63,3 +63,8 @@ ul {
   bottom: 0;
   left: 0;
 }
+.footer_icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}

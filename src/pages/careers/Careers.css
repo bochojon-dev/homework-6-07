@@ -1,0 +1,68 @@
+.career_contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 0 80px;
+}
+.career_texts {
+  width: 618px;
+}
+.career_texts h3 {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 72px;
+  color: #1d3444;
+}
+.career_texts p {
+  width: 520px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #5b5b5b;
+  padding: 12px 0 32px;
+}
+.energy_title {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.energy_title h4 {
+  width: 587px;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  color: #0d1317;
+}
+.energy_title p {
+  width: 587px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #5b5b5b;
+}
+.energy_item h2 {
+  font-weight: 700;
+  font-size: 36px;
+  color: #f58a07;
+}
+.energy_item h3 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #0d1317;
+  padding: 16px 0;
+}
+.energy_item p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #5b5b5b;
+  line-height: 28px;
+}
+.energy_item {
+  width: 264px;
+}
+.energy_items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 64px 0 108px;
+}

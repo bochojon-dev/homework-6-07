@@ -30,4 +30,5 @@
 .items button {
   background: #f58a071a !important;
   color: #f58a07 !important;
+  border: 0;
 }

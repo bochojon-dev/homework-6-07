@@ -1,0 +1,31 @@
+#Name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#date {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 24px;
+}
+#jon,
+#par {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  padding: 0;
+}
+#jon {
+  color: #394149;
+  width: 123px;
+}
+#par {
+  color: #394149;
+  width: 222px;
+}
+#button {
+  background: #fff;
+  color: #f58a07;
+  padding: 0;
+}

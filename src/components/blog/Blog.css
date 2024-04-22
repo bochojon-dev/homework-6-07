@@ -12,6 +12,9 @@
   border-radius: 20px;
   background: #fff;
 }
+.blog_card img {
+  width: 100%;
+}
 .blog_texts {
   padding: 32px;
 }
@@ -38,6 +41,9 @@
   align-items: center;
   gap: 8px;
   padding: 0 !important;
+}
+.blog_texts button img {
+  width: 22px;
 }
 .blog_contents h2 {
   font-weight: 600;
