@@ -23,16 +23,18 @@ const Blog = () => {
     },
   ];
   const card = cards?.map((el) => (
-    <div key={el.id} className="card">
+    <div key={el.id} className="blog_card">
       <img src={el.image} alt="naws" />
-      <h3>{el.title}</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit
-        amet eros blandit, hendrerit elit et.
-      </p>
-      <button>
-        Learn More <img src={arrow} alt="arrow" />
-      </button>
+      <div className="blog_texts">
+        <h3>{el.title}</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit
+          amet eros blandit, hendrerit elit et.
+        </p>
+        <button>
+          Learn More <img src={arrow} alt="arrow" />
+        </button>
+      </div>
     </div>
   ));
   return (

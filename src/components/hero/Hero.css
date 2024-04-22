@@ -2,7 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 58px 0 96px;
+  padding-top: 58px;
+}
+.hero {
+  background: #dceaf5;
 }
 .hero_texts h3 {
   font-size: 64px;
