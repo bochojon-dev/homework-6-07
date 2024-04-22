@@ -1,0 +1,25 @@
+.nav_contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+.nav_contents ul {
+  display: flex;
+  list-style-type: none;
+  gap: 32px;
+}
+.nav_contents .items {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.items li {
+  font-size: 16px;
+  font-weight: 600;
+  color: #394149;
+}
+.items button {
+  background: #f58a071a !important;
+  color: #f58a07 !important;
+}
