@@ -7,7 +7,20 @@ import instagram from "../../assets/images/instagram.svg";
 import twitter from "../../assets/images/twitter.svg";
 import left from "../../assets/images/left.png";
 import right from "../../assets/images/right.png";
+import { useLocation } from "react-router-dom";
 const Footer = () => {
+  let { pathname } = useLocation();
+  console.log(pathname);
+  if (
+    !pathname.includes("/about") ||
+    pathname.includes("/career") ||
+    pathname.includes("/service") ||
+    pathname.includes("/blog") ||
+    pathname.includes("/contact") ||
+    pathname.includes("/product")
+  ) {
+    return <></>;
+  }
   return (
     <div className="footer">
       <div className="container">

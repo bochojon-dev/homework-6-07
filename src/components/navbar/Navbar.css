@@ -5,6 +5,8 @@
   padding: 16px 0;
 }
 .navbar {
+  /* padding: 16px 0; */
+  box-shadow: 0 0 10px #0002;
   position: fixed;
   top: 0;
   right: 0;

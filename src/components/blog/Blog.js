@@ -4,7 +4,20 @@ import blog1 from "../../assets/images/blog1.png";
 import blog2 from "../../assets/images/blog2.png";
 import blog3 from "../../assets/images/blog3.png";
 import arrow from "../../assets/images/arrow.svg";
+import { useLocation } from "react-router-dom";
 const Blog = () => {
+  let { pathname } = useLocation();
+  console.log(pathname);
+  if (
+    !pathname.includes("/about") ||
+    pathname.includes("/career") ||
+    pathname.includes("/service") ||
+    pathname.includes("/blog") ||
+    pathname.includes("/contact") ||
+    pathname.includes("/product")
+  ) {
+    return <></>;
+  }
   const cards = [
     {
       id: 1,

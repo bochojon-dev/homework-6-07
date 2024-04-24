@@ -1,8 +1,13 @@
 import React from "react";
 import "../navbar/Navbar.css";
 import logo from "../../assets/images/Logo.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 const Navbar = () => {
+  let { pathname } = useLocation();
+  console.log(pathname);
+  if (pathname.includes("/register")) {
+    return <></>;
+  }
   const pages = [
     {
       id: 1,
@@ -15,31 +20,40 @@ const Navbar = () => {
       link: "/career",
     },
     {
-      id: 1,
+      id: 3,
       page: "Services",
       link: "/service",
     },
     {
-      id: 1,
+      id: 4,
       page: "Blog",
-      link: "/blogpage",
+      link: "/blog",
     },
     {
-      id: 1,
+      id: 5,
       page: "Contact Us",
       link: "/contact",
+    },
+    {
+      id: 6,
+      page: "Products",
+      link: "/product",
     },
   ];
   const page = pages?.map((el) => (
     <li key={el.id}>
-      <NavLink to={el.link}>{el.page}</NavLink>
+      <NavLink className={"nav_link"} to={el.link}>
+        {el.page}
+      </NavLink>
     </li>
   ));
   return (
     <div className="navbar">
       <div className="container">
         <div className="nav_contents">
-          <img src={logo} alt="logo" />
+          <NavLink to={"/about"}>
+            <img src={logo} alt="logo" />
+          </NavLink>
           <div className="items">
             <ul>{page}</ul>
             <button>Clone Project</button>

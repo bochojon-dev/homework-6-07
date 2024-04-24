@@ -28,4 +28,7 @@
   background: #fff;
   color: #f58a07;
   padding: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
