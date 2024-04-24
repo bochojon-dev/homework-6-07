@@ -4,7 +4,7 @@ import logo from "../../assets/images/Logo.svg";
 import { NavLink, useLocation } from "react-router-dom";
 const Navbar = () => {
   let { pathname } = useLocation();
-  console.log(pathname);
+  // console.log(pathname.split("/").slice(-1)[0]);
   if (pathname.includes("/register")) {
     return <></>;
   }
@@ -37,7 +37,7 @@ const Navbar = () => {
     {
       id: 6,
       page: "Products",
-      link: "/product",
+      link: " /products",
     },
   ];
   const page = pages?.map((el) => (

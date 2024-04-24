@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import "../products/Products.css";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import Footer from "../../components/footer/Footer";
 import contact from "../../assets/images/contact.png";
@@ -8,6 +9,8 @@ import arrow from "../../assets/images/arrow.svg";
 import jonson from "../../assets/images/jonson.svg";
 
 const Products = () => {
+  const { id } = useParams();
+  console.log(id);
   const API = "https://dummyjson.com/products";
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -19,7 +22,9 @@ const Products = () => {
   }, []);
   const cards = data?.map((el) => (
     <div key={el.id} className="post_card">
-      <img className="post_img" src={el.images[0]} alt="news" />
+      <Link to={`/product/${el.id}`}>
+        <img className="post_img" src={el.images[0]} alt="news" />
+      </Link>
       <div className="post_texts">
         <h3>{el.title}</h3>
         <p>

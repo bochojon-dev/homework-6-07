@@ -10,14 +10,15 @@ import right from "../../assets/images/right.png";
 import { useLocation } from "react-router-dom";
 const Footer = () => {
   let { pathname } = useLocation();
-  console.log(pathname);
+  // console.log(pathname);
   if (
     !pathname.includes("/about") ||
     pathname.includes("/career") ||
     pathname.includes("/service") ||
     pathname.includes("/blog") ||
     pathname.includes("/contact") ||
-    pathname.includes("/product")
+    pathname.includes("/product") ||
+    pathname.includes("single-route")
   ) {
     return <></>;
   }

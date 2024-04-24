@@ -10,6 +10,7 @@ import Blogpage from "./pages/blogpage/Blogpage";
 import Contact from "./pages/contact/Contact";
 import Products from "./pages/products/Products";
 import NotFound from "./pages/notFound/NotFound";
+import SingleRoute from "./pages/singleRoute/SingleRoute";
 function App() {
   return (
     <div className="App">
@@ -20,7 +21,8 @@ function App() {
         <Route path="/service" element={<Services />} />
         <Route path="/blog" element={<Blogpage />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/product" element={<Products />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/product/:id" element={<SingleRoute />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Blog />
