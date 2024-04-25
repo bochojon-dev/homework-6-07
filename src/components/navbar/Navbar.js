@@ -37,7 +37,7 @@ const Navbar = () => {
     {
       id: 6,
       page: "Products",
-      link: " /products",
+      link: "/products",
     },
   ];
   const page = pages?.map((el) => (

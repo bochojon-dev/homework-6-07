@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { useParams } from "react-router-dom";
+import axios from "../../api/index";
+import { Link, useParams } from "react-router-dom";
 
 const SingleRoute = () => {
   const { id } = useParams();
-  const [product, setProduct] = useState(null);
+  const [product, setProduct] = useState();
   useEffect(() => {
     axios
-      .get(`/products/${id}`)
+      .get(`/product/${id}`)
       .then((res) => setProduct(res.data))
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
   //   if (!product) {
   //     return (
   //       <img
@@ -25,18 +25,30 @@ const SingleRoute = () => {
   return (
     <div className="single">
       <div className="container">
-        <div className="single_contents">
+        <div
+          style={{
+            paddingTop: 120,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 20,
+          }}
+          className="single_contents"
+        >
           <img src={product?.images[0]} alt="product" />
           <div className="more_images">
             <img src={product?.images[1]} alt="" />
             <img src={product?.images[2]} alt="" />
           </div>
-          <h3>{product?.title}</h3>
-          <p>{product?.description}</p>
+          <h3>{product?.title} title</h3>
+          <p>{product?.description} description</p>
           <h4>
             Price: <span>cost</span>
           </h4>
-          <button>go back</button>
+          <Link to={"/products"}>
+            <button>go back</button>
+          </Link>
         </div>
       </div>
     </div>

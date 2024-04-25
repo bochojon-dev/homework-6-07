@@ -11,11 +11,11 @@ import jonson from "../../assets/images/jonson.svg";
 const Products = () => {
   const { id } = useParams();
   console.log(id);
-  const API = "https://dummyjson.com/products";
+  const url = "https://dummyjson.com/products";
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get(API)
+      .get(url)
       .then((res) => setData(res.data.products))
       .catch((err) => console.log(err));
     // .finally()
